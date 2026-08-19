@@ -122,3 +122,60 @@ footer{text-align:center;padding:50px 5vw;border-top:1px solid rgba(255,255,255,
     grid-row: auto;
   }
 }
+
+
+/* ===== INFOGRAFÍAS INSTITUCIONALES ===== */
+
+#infografias .info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1180px;
+  margin: 45px auto 0;
+  padding: 0 20px;
+}
+
+#infografias .info-card-image {
+  background: #0b0b0b;
+  border: 1px solid rgba(217, 174, 82, 0.35);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+#infografias .info-card-image:hover {
+  transform: translateY(-6px);
+  border-color: #d9ae52;
+}
+
+#infografias .info-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  #infografias .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  #infografias .info-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 18px;
+  }
+
+  #infografias .info-card-image {
+    border-radius: 12px;
+  }
+
+  #infografias .info-card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
