@@ -222,3 +222,35 @@ footer{text-align:center;padding:50px 5vw;border-top:1px solid rgba(255,255,255,
   cursor: pointer;
   z-index: 10000;
 }
+
+/* Ajuste del visor para celular */
+@media (max-width: 600px) {
+  .visor-infografia {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    padding: 70px 12px 20px;
+    background: #000;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .visor-infografia img {
+    max-width: 100%;
+    max-height: calc(100dvh - 100px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cerrar-visor {
+    position: fixed;
+    top: max(15px, env(safe-area-inset-top));
+    right: 18px;
+    z-index: 100000;
+    font-size: 48px;
+    line-height: 1;
+  }
+}
