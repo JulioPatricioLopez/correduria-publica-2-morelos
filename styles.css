@@ -254,3 +254,102 @@ footer{text-align:center;padding:50px 5vw;border-top:1px solid rgba(255,255,255,
     line-height: 1;
   }
 }
+
+/* ==================================================
+   PÁGINA DE INFOGRAFÍAS Y VIDEOS
+   ================================================== */
+
+.contenido-page {
+  min-height: 100vh;
+}
+
+.contenido-page .section-heading {
+  max-width: 900px;
+  margin-bottom: 45px;
+}
+
+/* Cuadrícula de publicaciones */
+.infografias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* Tarjeta */
+.contenido-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(201, 160, 82, 0.35);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.contenido-card:hover {
+  transform: translateY(-5px);
+  border-color: #c9a052;
+}
+
+/* Imagen o video */
+.contenido-media {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #080808;
+}
+
+.contenido-media img,
+.contenido-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Información debajo de cada publicación */
+.contenido-info {
+  padding: 18px 20px 22px;
+}
+
+.contenido-tipo {
+  display: block;
+  margin-bottom: 8px;
+  color: #c9a052;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.contenido-info h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .infografias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .infografias-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contenido-page .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .contenido-media {
+    aspect-ratio: auto;
+  }
+
+  .contenido-media img {
+    width: 100%;
+    height: auto;
+  }
+}
