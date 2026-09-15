@@ -118,3 +118,48 @@ const year = document.getElementById("year");
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+
+// =====================================================
+// VISOR AMPLIADO DE INFOGRAFÍAS
+// =====================================================
+
+const visorInfografia = document.getElementById("visor-infografia");
+const imagenAmpliada = document.getElementById("imagen-ampliada");
+const cerrarVisor = document.getElementById("cerrar-visor");
+
+if (visorInfografia && imagenAmpliada && cerrarVisor) {
+
+  document.addEventListener("click", (evento) => {
+
+    const imagen = evento.target.closest(".contenido-media img");
+
+    if (imagen) {
+      imagenAmpliada.src = imagen.src;
+      imagenAmpliada.alt = imagen.alt;
+      visorInfografia.classList.add("activo");
+      document.body.style.overflow = "hidden";
+    }
+
+  });
+
+  function cerrarInfografia() {
+    visorInfografia.classList.remove("activo");
+    imagenAmpliada.src = "";
+    document.body.style.overflow = "";
+  }
+
+  cerrarVisor.addEventListener("click", cerrarInfografia);
+
+  visorInfografia.addEventListener("click", (evento) => {
+    if (evento.target === visorInfografia) {
+      cerrarInfografia();
+    }
+  });
+
+  document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") {
+      cerrarInfografia();
+    }
+  });
+
+}
