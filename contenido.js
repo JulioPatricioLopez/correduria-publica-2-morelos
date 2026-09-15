@@ -6,22 +6,26 @@
 
 const publicaciones = [
 
-  // EJEMPLO DE INFOGRAFÍA:
-  // {
-  //   tipo: "infografia",
-  //   titulo: "Título de la infografía",
-  //   archivo: "assets/nombre-del-archivo.jpg",
-  //   fecha: "2026-09-15"
-  // },
+ {
+    tipo: "infografia",
+    titulo: "¿Vas a iniciar un negocio?",
+    archivo: "assets/WhatsApp Image 2026-08-18 at 13.41.15 (7).jpeg",
+    fecha: "2026-08-18"
+  },
 
-  // EJEMPLO DE VIDEO:
-  // {
-  //   tipo: "video",
-  //   titulo: "Título del video",
-  //   archivo: "assets/nombre-del-video.mp4",
-  //   fecha: "2026-09-15"
-  // }
+  {
+    tipo: "infografia",
+    titulo: "Constituye tu S.A. de C.V.",
+    archivo: "assets/WhatsApp Image 2026-08-18 at 13.41.15 (6).jpeg",
+    fecha: "2026-08-18"
+  },
 
+  {
+    tipo: "infografia",
+    titulo: "Servicios profesionales",
+    archivo: "assets/WhatsApp Image 2026-08-18 at 13.41.15 (2).jpeg",
+    fecha: "2026-08-18"
+  }
 ];
 
 
