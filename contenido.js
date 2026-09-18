@@ -123,35 +123,37 @@ if (year) {
 // VISOR AMPLIADO DE INFOGRAFÍAS
 // =====================================================
 
-const visorInfografia = document.getElementById("visor-infografia");
-const imagenAmpliada = document.getElementById("imagen-ampliada");
-const cerrarVisor = document.getElementById("cerrar-visor");
+const visorInfografiaContenido = document.getElementById("visor-infografia");
+const imagenAmpliadaContenido = document.getElementById("imagen-ampliada");
+const cerrarVisorContenido = document.getElementById("cerrar-visor");
 
-if (visorInfografia && imagenAmpliada && cerrarVisor) {
+
+if (visorInfografiaContenido && imagenAmpliadaContenido && cerrarVisorContenido) {
 
   document.addEventListener("click", (evento) => {
 
     const imagen = evento.target.closest(".contenido-media img");
 
     if (imagen) {
-      imagenAmpliada.src = imagen.src;
-      imagenAmpliada.alt = imagen.alt;
-      visorInfografia.classList.add("activo");
+      imagenAmpliadaContenido.src = imagen.src;
+imagenAmpliadaContenido.alt = imagen.alt;
+visorInfografiaContenido.classList.add("activo");
+
       document.body.style.overflow = "hidden";
     }
 
   });
 
   function cerrarInfografia() {
-    visorInfografia.classList.remove("activo");
-    imagenAmpliada.src = "";
+    visorInfografiaContenido.classList.remove("activo");
+    imagenAmpliadaContenido.src = "";
     document.body.style.overflow = "";
   }
 
-  cerrarVisor.addEventListener("click", cerrarInfografia);
+  cerrarVisorContenido.addEventListener("click", cerrarInfografia);
 
-  visorInfografia.addEventListener("click", (evento) => {
-    if (evento.target === visorInfografia) {
+  visorInfografiaContenido.addEventListener("click", (evento) => {
+    if (evento.target === visorInfografiaContenido) {
       cerrarInfografia();
     }
   });
