@@ -16,7 +16,7 @@ const publicaciones = [
   {
     tipo: "infografia",
     titulo: "Constituye tu S.A. de C.V.",
-    archivo: "assets/WhatsApp Image 2026-08-18 at 13.41.15 (6).jpeg",
+    archivo: "assets/infografia_correduria_SA_de_CV.jpg",
     fecha: "2026-08-18"
   },
 
