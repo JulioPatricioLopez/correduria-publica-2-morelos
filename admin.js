@@ -4,7 +4,8 @@ const listaPublicaciones = document.getElementById("lista-publicaciones");
 async function cargarPublicaciones() {
   try {
     const respuesta = await fetch("/api/publicaciones");
-    const publicaciones = await respuesta.json();
+    const datos = await respuesta.json();
+const publicaciones = datos.publicaciones || [];
 
     listaPublicaciones.innerHTML = "";
 
