@@ -11,9 +11,10 @@
     {
       "binding": "DB",
       "database_name": "correduria-contenido-db",
-      "database_id": "888bc969-2975-4590-a7ff-5e0e19971218"
-   ],
-  "r2_buckets": [
+     "database_id": "888bc969-2975-4590-a7ff-5e0e19971218"
+}
+],
+"r2_buckets": [
     {
       "binding": "CONTENIDO",
       "bucket_name": "correduria-contenido"
